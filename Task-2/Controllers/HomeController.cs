@@ -73,6 +73,7 @@ namespace Task_2.Controllers
             return JavaScript("alert('Hello World');");
         }
 
+        //PartialViewResult - Returns a partial view
         public PartialViewResult GetPartialView()
         {
             return PartialView("GetPartialView");

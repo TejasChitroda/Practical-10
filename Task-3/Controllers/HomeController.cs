@@ -13,7 +13,9 @@ namespace Task_3.Controllers
         [OutputCache(Duration = 300)]
         public ActionResult Index()
         {
+            //This will return the current server time
             string currentTime = "Current Server Time: " + DateTime.Now.ToString();
+            //Content is used to return the plain text
             return Content(currentTime);
         }
     }

@@ -1,0 +1,57 @@
+﻿<style>
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+        ul li a {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+            ul li a:hover {
+                background-color: black;
+                color: white;
+            }
+</style>
+
+<h1>Action Result Demo Practical-10 Task-2</h1>
+
+<ul>
+    <li><a href="@Url.Action("ActionResultDemo", "Home")">Action Result Demo</a></li>
+    <li><a href="@Url.Action("GetJsonData", "Home")">Get JSON Data</a></li>
+    <li><a href="@Url.Action("GetText", "Home")">Get Plain Text</a></li>
+    <li><a href="@Url.Action("DoNothing", "Home")">Empty Result</a></li>
+    <li><a href="@Url.Action("DownloadFile", "Home")">Download File</a></li>
+    <li><a href="@Url.Action("RedirectToGoogle", "Home")">Redirect to Google</a></li>
+    <li><a href="@Url.Action("GetPartialView", "Home")">Get Partial View</a></li>
+    <li><a href="@Url.Action("RedirectToGetText", "Home")">Redirect To GetText</a></li>
+    <li><button class="btn btn-outline-dark" id="javascriptRun">Get JavaScript</button></li>
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#javascriptRun").click(function () {
+            $.ajax({
+                url: "/Home/GetJavaScript",
+                type: "GET"
+            });
+        });
+    });
+</script>
